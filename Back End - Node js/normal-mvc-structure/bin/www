@@ -1,0 +1,71 @@
+const app = require('../src/server')
+const http = require("http");
+var https = require("https");
+const socket = require('socket.io');
+const { socketModule } = require('../src/socket/socket');
+require("dotenv").config();
+
+/**
+ * Get port from environment and store in Express.
+*/
+const PORT = process.env["PORT_" + process.env.RUN_MODE] || "3000";
+app.set("port", PORT);
+
+
+let server;
+if (process.env.HOST === "live") {
+  var options = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca,
+  }
+  server = https.Server(options, app);
+} else {
+  server = http.createServer(app);
+}
+
+server.listen(PORT, () => {
+  console.log(
+    `Your Application running on ${PORT} in ${process.env.RUN_MODE} Environment`
+  );
+});
+
+server.on("error", onError);
+server.on("listening", onListening);
+
+
+/**
+ * Event listener for HTTP server "error" event.
+*/
+function onError(error) {
+  if (error.syscall !== "listen") {
+    throw error;
+  }
+
+  var bind = typeof PORT === "string" ? "Pipe " + PORT : "Port " + PORT;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  // debug("Listening on " + bind);
+}
+
+
+let io = socket(server, { cors: { origin: "*" } });
+socketModule(io)
