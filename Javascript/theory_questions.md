@@ -45,6 +45,18 @@ In JavaScript, == checks if values are equal, but it doesn’t mind if they’re
 On the other hand, === checks both value and type. So, ‘5’ and 5 are not equal with === because they’re different types (string vs. number).
 ```
 
+#### 8. What is Data Structure?
+```
+A data structure is defined as a particular way of storing and organizing data in our devices to use the data efficiently and effectively. The main idea behind using data structure is to minimize the time and space complexities. An efficient data structure takes minimum memory space and minimum time to execute the data.    
+```
+
+#### 9. What is array?
+    An array is a fundamental data structure in javascript used to store a collection of elements. These elements can be any data type, including numbers, strings or objects. These elements are stored in a specific sequence, and you can access each element by its index.
+
+```
+let arrayName = [value1, value2, ...]; // Method 1
+let arrayName = new Array(); // Method 2
+```
 
 
 
