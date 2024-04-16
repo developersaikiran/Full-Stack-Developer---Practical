@@ -13,6 +13,8 @@ mongoose.connect(MONGODB_URL).then(()=>{
 
 const db = {
     users: require('./users'),
+    roles: require('./roles'),
+    userRole: require('./userRole'),
     buyers: require('./buyers'),
     sellers: require('./sellers'),
 }

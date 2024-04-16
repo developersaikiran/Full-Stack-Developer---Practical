@@ -168,6 +168,6 @@ git config --global --list
 ```
 
 
----------------- Use Git module wise -----------------
-#### 
----------------- Use Git module wise -----------------
+---
+
+## Use Git module wise 
