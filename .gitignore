@@ -2,6 +2,33 @@
 
 --------------- Back End - Node js / normal-mvc-structure ---------------
 Back End - Node js/normal-mvc-structure/node_modules
+Back End - Node js/normal-mvc-structure/package-lock.json
 Back End - Node js/normal-mvc-structure/.env
 Back End - Node js/normal-mvc-structure/src/logs/*
+--------------- ---------------
+
+
+--------------- Front End - React - Web ---------------
+# dependencies
+Front-End-React-Web/node_modules
+Front-End-React-Web/package-lock.json
+Front-End-React-Web/.pnp
+Front-End-React-Web/.pnp.js
+
+# testing
+Front-End-React-Web/coverage
+
+# production
+Front-End-React-Web/build
+
+# misc
+Front-End-React-Web/.DS_Store
+Front-End-React-Web/.env.local
+Front-End-React-Web/.env.development.local
+Front-End-React-Web/.env.test.local
+Front-End-React-Web/.env.production.local
+
+Front-End-React-Web/npm-debug.log*
+Front-End-React-Web/yarn-debug.log*
+Front-End-React-Web/yarn-error.log*
 --------------- ---------------
