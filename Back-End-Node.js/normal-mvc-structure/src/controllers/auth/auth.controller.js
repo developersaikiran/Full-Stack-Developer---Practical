@@ -27,7 +27,7 @@ class AuthController {
                         email: findUser.email
                     }
                     const token = await jwt.sign(tokenData, tokenSecretKey, {})
-                    return responses.badRequest("incorrect password entered", {token});
+                    return responses.badRequest("Login successful", {token});
                 }else{
                     return responses.badRequest("incorrect password entered", {});
                 }
