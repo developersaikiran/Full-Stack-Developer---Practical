@@ -1,18 +1,19 @@
 import { Suspense, useContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import { Spin } from 'antd'
-import { BrowserRouter } from 'react-router-dom'
-import MainContent from './containers/MainContent/MainContent'
+import { ConfigProvider, Spin } from 'antd'
+import { BrowserRouter, RouterProvider } from 'react-router-dom'
+import MainContent from './layouts/MainContent/MainContent'
 import SocketProvider from './contexts/SocketProvider'
-import ThemeProvider, { ThemeContext } from './contexts/ThemeProvider' 
+import ThemeProvider, { ThemeContext } from './contexts/ThemeProvider'
+import "./assets/stylesheets/styles.css";
+import { router } from './router'
 
 function App() {
-  // const {
-  //   theme,
-  //   themePlate,
-  // } = useContext(ThemeContext)
+  const {
+    theme,
+    themePlate,
+  } = useContext(ThemeContext)
 
   // // SET THEME START
   // useEffect(() => {
@@ -21,11 +22,17 @@ function App() {
 
   return (
     <div >
-      <ThemeProvider>
-        <SocketProvider>
-          <MainContent />
-        </SocketProvider>
-      </ThemeProvider>
+      <SocketProvider>
+        <ConfigProvider
+          theme={{
+            token: {
+              fontFamily: "Nunito, Segoe UI, Arial, sans-serif",
+            }
+          }}
+        >
+          <RouterProvider router={router} />
+        </ConfigProvider>
+      </SocketProvider>
     </div>
   )
 }

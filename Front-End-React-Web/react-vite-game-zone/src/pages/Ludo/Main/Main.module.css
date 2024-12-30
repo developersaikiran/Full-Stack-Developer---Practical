@@ -1,0 +1,159 @@
+.authenticationWrapper {
+    height: 100%;
+}
+
+.authCover {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-all);
+}
+
+.authImageContainer {
+    max-width: 550px;
+    max-height: 550px;
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.authContent {
+    max-width: 550px;
+}
+
+.authImageBg {
+    position: relative;
+}
+
+.authImageBg::after,
+.authImageBg::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.authImageBg::after {
+    width: 380px;
+    height: 380px;
+    background-color: var(--parrot);
+}
+
+.authImageBg::before {
+    width: 420px;
+    height: 420px;
+    background-color: transparent;
+    border: 2px solid var(--parrot);
+}
+
+.authImage {
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+    object-fit: contain;
+}
+
+.verifyLogo {
+    width: 36px;
+    height: 36px;
+}
+
+.AKResetPasswordBtn span {
+    width: 24px;
+    height: 24px;
+}
+
+.otpWrapper {
+    margin-bottom: 30px;
+}
+
+.otpWrapper :global .otp-container {
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.otpWrapper :global .otp-container .separator {
+    font-size: 18px;
+    color: var(--swifts);
+}
+
+.otpWrapper :global .otp-container .otp-input {
+    background-color: transparent;
+    border: 1px solid var(--swifts);
+    color: var(--title-color);
+    border-radius: 5px;
+    max-width: 50px;
+    height: 50px;
+    width: 100% !important;
+    transition: var(--transition-all);
+}
+
+.otpWrapper :global .otp-container .otp-input:focus,
+.otpWrapper :global .otp-container .otp-input:focus-visible,
+.otpWrapper :global .otp-container .otp-input:hover {
+    border: 1px solid var(--kingfisher);
+    outline: 0;
+}
+
+.authContent h2,.authContent h3{
+    text-align: center;
+}
+
+@media (max-width:1399px) {
+
+    .authImageContainer {
+        max-width: 450px;
+        max-height: 450px;
+    }
+}
+
+@media (max-width:1199px) {
+
+    .authImageContainer {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .authImageCol {
+        display: none;
+    }
+}
+
+@media (max-width:992px) {
+
+    .authContent {
+        padding: 30px 15px 15px 15px;
+    }
+}
+
+@media (max-width:767px) {
+    .authenticationWrapper .authSingleColContainer {
+        padding: 0 !important;
+    }
+
+    .otpWrapper {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:575px) {
+    .authSingleColContainer .authCover {
+        align-items: flex-start;
+        border-radius: 6px;
+    }
+
+    .otpWrapper :global .otp-container {
+        gap: 10px;
+    }
+
+}

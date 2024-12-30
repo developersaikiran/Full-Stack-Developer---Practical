@@ -1,0 +1,151 @@
+@media (max-width:1799px) {
+
+    :root {
+        --header-height: 90px;
+        --sidebar-width: 240px;
+        --sidebar-width-collapsed: 70px;
+        --sidebar-trigger-height: 46px;
+    }
+}
+
+@media (max-width:1499px) {
+
+    :root {
+        --header-height: 80px;
+        --sidebar-width: 210px;
+        --sidebar-width-collapsed: 60px;
+        --sidebar-trigger-height: 44px;
+    }
+
+    /* FONT SIZES START */
+    h1,
+    .h1 {
+        font-size: 38px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 24px;
+    }
+
+    h2.small,
+    .h2.small {
+        font-size: 22px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 18px;
+    }
+
+    h3.small,
+    .h3.small {
+        font-size: 16px;
+    }
+
+    h4,
+    .h4,
+    p.big,
+    .p.big {
+        font-size: 14px;
+    }
+    /* FONT SIZES END */
+}
+
+@media (max-width:1399px) {
+
+    /* FONT SIZES START */
+    h1,
+    .h1 {
+        font-size: 36px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 22px;
+    }
+
+    h2.small,
+    .h2.small {
+        font-size: 20px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 18px;
+    }
+
+    h3.small,
+    .h3.small {
+        font-size: 16px;
+    }
+
+    h4,
+    .h4,
+    p.big,
+    .p.big {
+        font-size: 14px;
+    }
+
+    h4.small,
+    .h4.small,
+    p {
+        font-size: 12px;
+    }
+
+    /* FONT SIZES END */
+
+}
+
+@media(max-width:991px) {
+
+    /* FONT SIZES START */
+    h1,
+    .h1 {
+        font-size: 34px;
+    }
+
+    /* FONT SIZES END */
+
+}
+
+@media (max-width: 767px) {
+    h1,
+    .h1 {
+        font-size: 30px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 20px;
+    }
+
+    .search-input-md {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .search-input-md input {
+        max-width: 100%;
+    }
+
+    .social-icons {
+        padding: 6px;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 575px) {
+
+    h1,
+    .h1 {
+        font-size: 28px;
+    }
+
+    .social-icons {
+        width: 38px;
+        height: 38px;
+    }
+}

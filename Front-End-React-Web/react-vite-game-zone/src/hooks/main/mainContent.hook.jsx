@@ -1,6 +1,6 @@
 import { suseState, useState } from "react";
 
-export const useMainContextHook = () => {
+export const useMainContentHook = () => {
 	const isToken = localStorage.getItem("_token");
 
     const [isHeaderVisible, setIsHeaderVisible] = useState(true)

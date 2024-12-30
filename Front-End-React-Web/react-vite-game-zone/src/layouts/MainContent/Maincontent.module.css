@@ -1,0 +1,15 @@
+.ContentLayout {
+    transition: var(--transition-all);
+    background-color: var(--parrot);
+}
+
+.MainContent {
+    padding: 20px;
+    height: 100%;
+}
+
+@media (max-width:767px) {
+    .MainContent {
+        padding: 15px;
+    }
+}

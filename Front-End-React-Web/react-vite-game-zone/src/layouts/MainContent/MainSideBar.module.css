@@ -1,0 +1,139 @@
+.Sidebar:global.ant-layout-sider .ant-menu-item-group-title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--secondary-title-text);
+}
+
+.Sidebar:global.ant-layout-sider-trigger,
+.Sidebar:global.ant-layout-sider {
+  transition: var(--transition-all);
+}
+
+.Sidebar:global.ant-layout-sider.ant-layout-sider-collapsed .ant-menu-item-group-title {
+  text-align: center;
+}
+
+.Sidebar:global.ant-layout-sider .ant-menu-title-content {
+  font-size: 15px;
+}
+
+.Sidebar:global.ant-layout-sider .ant-menu-item-icon,
+.Sidebar:global.ant-layout-sider .ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,
+.Sidebar:global.ant-layout-sider .ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon {
+  font-size: 18px;
+}
+
+.Sidebar:global.ant-layout-sider::-webkit-scrollbar {
+  display: none;
+}
+
+.Sidebar:global.ant-layout-sider {
+  background-color: var(--header-bg);
+  z-index: 9999;
+}
+
+.SidebarLogo {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+  margin: auto;
+  color: var(--kingfisher);
+  transition: var(--transition-all);
+}
+
+
+.SidebarLogo svg,
+.SidebarLogo img {
+  object-fit: contain;
+  max-width: 160px;
+}
+
+.sidebarSmallLogo svg{
+  max-width: 40px;
+}
+
+.SidebarLogoWrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--header-bg);
+  z-index: 99;
+}
+
+.SidebarMenu {
+  background-color: var(--header-bg);
+}
+
+.SidebarMenu:global.ant-menu-light .ant-menu-item {
+  border: 1px solid;
+  border-color: transparent;
+}
+
+.SidebarMenu:global.ant-menu.ant-menu-light .ant-menu-submenu-selected>.ant-menu-submenu-title,
+.SidebarMenu:global.ant-menu.ant-menu-light .ant-menu-item-selected {
+  color: var(--white);
+  border-color: var(--kingfisher);
+  background: var(--kingfisher);
+}
+
+.SidebarMenu:global.ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
+.SidebarMenu:global.ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
+.SidebarMenu:global.ant-menu-light .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
+.SidebarMenu:global.ant-menu-light>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
+  color: white;
+  background: var(--kingfisher);
+}
+
+.SidebarMenu:global.ant-menu.ant-menu-light .ant-menu-sub.ant-menu-inline {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.Sidebar:global.ant-layout-sider .ant-layout-sider-trigger {
+  background: var(--kingfisher);
+  height: var(--sidebar-trigger-height);
+  transition: var(--transition-all);
+}
+
+.SidebarMenu:global.ant-menu .ant-menu-submenu-title {
+  color: var(--pelican);
+}
+
+.SidebarMenu:global.ant-menu .ant-menu-item {
+  color: var(--secondary-title-text);
+}
+
+html[data-sidebar-show=false] .SidebarUpdate.Sidebar:global.ant-layout-sider {
+  transform: translate(-100%, 0);
+  min-height: inherit;
+  /* height: 100%; */
+}
+
+html[data-sidebar-show=true] .SidebarUpdate.Sidebar:global.ant-layout-sider {
+  min-height: 100vh;
+}
+
+@media (max-width: 1799px) {
+
+  .Sidebar:global.ant-layout-sider .ant-menu-title-content {
+    font-size: 14px;
+  }
+
+  .Sidebar:global.ant-layout-sider .ant-menu-item-group-title {
+    font-size: 11px;
+  }
+
+  .Sidebar:global.ant-layout-sider .ant-menu-item-icon,
+  .Sidebar:global.ant-layout-sider .ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-item .ant-menu-item-icon,
+  .Sidebar:global.ant-layout-sider .ant-menu-inline-collapsed>.ant-menu-item-group>.ant-menu-item-group-list>.ant-menu-submenu>.ant-menu-submenu-title .ant-menu-item-icon {
+    font-size: 16px;
+  }
+
+}
+@media (max-width: 1599px){
+  .SidebarMenu{
+    padding-bottom: 44px;
+  }
+}

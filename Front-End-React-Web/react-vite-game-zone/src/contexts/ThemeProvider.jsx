@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 
 export const ThemeContext = createContext();
+
 const ThemeProvider = ({ children }) => {
     const initialTheme = localStorage.getItem('theme');
     const [theme, setTheme] = useState(() => { return initialTheme ? initialTheme : 'dark' });
@@ -10,7 +11,11 @@ const ThemeProvider = ({ children }) => {
 
     const initialThemePlate = localStorage.getItem('themePlate');
     const [themePlate, setThemePlate] = useState(() => { return initialThemePlate ? initialThemePlate : (theme == 'dark' ? defaultDarkTheme : defaultLightTheme) });
-
+    
+    const [sideBarToggleBtn, setSideBarToggleBtn] = useState(false);
+    const [sidebarToggle, setSidebarToggle] = useState(false);
+    const [headerPaddingLeft, setHeaderPaddingLeft] = useState(0);
+    
     return (
         <ThemeContext.Provider
             value={
@@ -19,6 +24,11 @@ const ThemeProvider = ({ children }) => {
                     setTheme,
                     themePlate,
                     setThemePlate,
+                    sideBarToggleBtn,
+                    setSideBarToggleBtn,
+                    sidebarToggle, 
+                    setSidebarToggle,
+                    setHeaderPaddingLeft,
                 }
             }
         >

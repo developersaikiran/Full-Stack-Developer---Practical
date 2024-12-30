@@ -1,0 +1,117 @@
+.header {
+  width: 100%;
+  height: 60px;
+  left: 0;
+  top: 0;
+  background-color: var(--header-bg);
+  display: flex;
+  align-items: center;
+}
+
+.mainHeader {
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerElement {
+  color: var(--secondary-title-text);
+  transition: var(--transition-all);
+}
+
+.headerContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.headerElement {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 0;
+}
+
+.headerContainerRight {
+  gap: 20px;
+}
+
+.headerContainerRight .headerElement {
+  cursor: pointer;
+}
+
+.headerContainerLeft {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--secondary-title-text);
+}
+
+.settingBtn svg,
+.settingBtn img {
+  position: relative;
+  animation-name: rotateIcons;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateIcons {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notification {
+  position: relative;
+}
+
+.notification svg {
+  width: 100%;
+  object-fit: contain;
+}
+
+.notification::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--pelican);
+}
+
+.offCanvas :global .ant-drawer-body {
+  padding: 0;
+}
+
+.offCanvas :global .ant-tabs>.ant-tabs-nav {
+  max-width: calc(100% - 40px);
+  margin: 0px auto;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media (max-width:992px) {
+  .headerElement {
+    width: 22px;
+    height: 22px;
+  }
+
+  .headerContainerLeft {
+    width: 22px;
+    height: 22px;
+  }
+}
