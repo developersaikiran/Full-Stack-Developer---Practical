@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hallowCircleDefault {
+    width: 50%; /* Adjust the size as per your preference */
+    height: 50%; /* Ensure the circle is large enough */
+    position: absolute;
+    bottom: 5px;
+    border-radius: 50%; /* Ensure the shape is a circle */
+    border: 2px solid black; /* Add the border for the hollow effect */
+    background-color: transparent; /* Ensure the center is transparent */
+}
+
+.hallowCircle {
+    width: 50%; /* Adjust the size as per your preference */
+    height: 50%; /* Ensure the circle is large enough */
+    position: absolute;
+    bottom: 5px;
+    border-radius: 50%; /* Ensure the shape is a circle */
+    border: 2px dashed white; /* Add the border for the hollow effect */
+    background-color: transparent; /* Ensure the center is transparent */
+}
+
+.pileIcon {
+    /* width: 50px; */
+    /* height: 40px; */
+    border-radius: 50%; /* Make the coin circular */
+    position: relative;
+    z-index: 1; /* Ensure it stays above the hollow circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 25%;
+}

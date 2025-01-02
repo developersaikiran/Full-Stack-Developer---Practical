@@ -1,43 +1,37 @@
-import { Col, Row } from "antd";
-import { svgIcons } from "@config/svgIcons";
 import { HappyCasualMan } from "@config/imageData";
 import { Clsx } from "@utils";
-import GameCard from "../Card/GameCard";
+import LudoBoardScreen from "../LudoBoardScreen/LudoBoardScreen";
 import MainStyle from "./Main.module.css";
-// import AKInput from "@components/AKForms/AKFormControls/AKInputControls/AKInput";
+import bgVerticleImage from '../../../assets/ludo/images/verticle-bg.jpg';
+import bghorizontalImage from '../../../assets/ludo/images/bg.jpg';
+import { Player } from "@lottiefiles/react-lottie-player";
+import girlAnimation from '../../../assets/ludo/animation/girl.json';
 
 const LudoMainPage = () => {
     return (
         <>
-            <div
-                className={
-                    Clsx("d-flex h-m-inherit",
-                        MainStyle.authenticationWrapper
-                    )}
-            >
-                <Row className="h-full h-m-inherit my-auto mx-0">
-                    {/* game section */}
-                    <Col xs={24} lg={24} xl={12}
-                        className={Clsx("flex items-center justify-center", MainStyle.authContentCol )}
-                        style={{ backgroundColor: 'red' }}
-                    >
-                        <GameCard />
-                    </Col>
+            <div className={Clsx("h-m-inherit", MainStyle.ludoSection)} style={{ backgroundImage: `url(${bgVerticleImage})`, backgroundPosition: 'center' }}>
 
-                    {/* communication section */}
-                    <Col xs={12} className={MainStyle.authImageCol} >
-                        <div className="pa-5 p-0 h-full">
-                            <div className={
-                                Clsx("bg-owl h-m-inherit",
-                                    MainStyle.authCover
-                                )}>
-                                <div className={MainStyle.authImageContainer} >
-                                    <img src={HappyCasualMan} alt="annakoot image" className={MainStyle.authImage} />
-                                </div>
+                {/* game section */}
+                <div className={Clsx(MainStyle.gameCardSection)} style={{ backgroundImage: `url(${import('../../../assets/ludo/images/bg.jpg')})` }}>
+                    <LudoBoardScreen />
+                </div>
+
+                {/* communication section */}
+                <div className={MainStyle.communicationSection} >
+                    <div className="pa-5 p-0 h-full" style={{height: '100%'}}>
+                        <div className={Clsx("bg-owl h-m-inherit", MainStyle.authCover)}>
+                            <div className={MainStyle.authImageContainer} >
+                                {/* <Player
+                                    autoplay
+                                    loop={true}
+                                    src={girlAnimation}
+                                    style={{  }}
+                                /> */}
                             </div>
                         </div>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </div>
         </>
     );

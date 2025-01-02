@@ -25,14 +25,15 @@ const MainContent = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 1399) {
+            if (window.innerWidth >= 1299) {
                 {
                     !sideBarCollapsed
                         ? setMarginLeft("var(--sidebar-width)")
                         : setMarginLeft("var(--sidebar-width-collapsed)");
                 }
             } else {
-                setMarginLeft("0");
+                setMarginLeft("var(--sidebar-width-collapsed)");
+                // setMarginLeft("0");
             }
         };
         handleResize();
@@ -44,9 +45,9 @@ const MainContent = () => {
 
     useEffect(() => {
         sidebarToggle === true
-          ? setHeaderPaddingLeft("75px")
-          : setHeaderPaddingLeft("20px");
-      }, [sidebarToggle]);
+            ? setHeaderPaddingLeft("75px")
+            : setHeaderPaddingLeft("20px");
+    }, [sidebarToggle]);
 
     return (
         <>

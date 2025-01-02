@@ -1,0 +1,65 @@
+.flexRow {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.ludoContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    /* Optional background color */
+}
+
+.locationBox {
+    width: 60px;
+    /* Adjust size */
+    height: 60px;
+    background-color: #2d83da;
+    /* Blue color from the design */
+    border: 3px solid yellow;
+    /* Yellow border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.locationImage {
+    width: 40px;
+    height: 40px;
+}
+
+.diceBox {
+    width: 80px;
+    /* Adjust size */
+    height: 80px;
+    background-color: #f7d6d6;
+    /* Pink color from the design */
+    border: 3px solid #b2e3b2;
+    /* Greenish border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.diceImage {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+.arrowIcon {
+    width: 100px;
+    height: 60px;
+}
+.arrowIconImage {
+    width: 60px;
+    height: 60px;
+}

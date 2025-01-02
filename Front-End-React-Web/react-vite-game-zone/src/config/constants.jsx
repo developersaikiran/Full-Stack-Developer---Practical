@@ -1,4 +1,4 @@
-const environment = "production"
+export const environment = "development"
 export const constant = {
     URL: (environment == 'production' ? {
         api: 'http://192.168.1.7:3000',
